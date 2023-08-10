@@ -18,11 +18,9 @@ net_income_calc = function (decimals = 4) {
 		balance = parseFloat(net_income.toFixed(4));
 	}
 
-	if (typeof balance === "number") {
-		console.log("R" + balance.toFixed(decimals));
-	} else {
-		console.log("Balance:", (balance = null));
-	}
+	typeof balance === "number"
+		? console.log("R" + balance.toFixed(decimals))
+		: console.log("Balance:", (balance = null));
 };
 
 net_income_calc(2);
